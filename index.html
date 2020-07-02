@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 - Números do COVID-19</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&family=Ubuntu:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="public/style.css">
+</head>
+
+<body>
+    <div class="info">
+        <p>Desenvolvido por <a href="https://www.linkedin.com/in/maicon-boer-35210797/">Maicon Boer</a>.
+            <span>Alterado por <a href="https://www.linkedin.com/in/brunnosena/">@brunnosena</a></span></p>
+    </div>
+    <!-- header -->
+    <header class="header">
+
+        <section class="container container-select">
+
+            <div class="logo">
+                <img src="public/assets/icons/coronavirus.svg" alt="">
+
+                <div class="general">
+                    <div class="header-general">
+                        <img src="public/assets/icons/globe.svg" alt="">
+                        <h3>Números no mundo</h3>
+                    </div>
+                    <div class="last-update-general"></div>
+                </div>
+            </div>
+
+            <div>
+                <select class="select-country" name="select-country">
+                    <!-- recebe paises dinamicamente -->
+                </select>
+
+                <button class="btn-search">Buscar</button>
+            </div>
+
+        </section>
+
+    </header>
+
+    <!-- content -->
+    <section class="container container-informations">
+
+        <div class="last-update"></div>
+        <div class="data"></div>
+
+    </section>
+
+    <section class="container container-recommendations">
+
+        <div class="recommendations">
+
+            <div class="recommendation-1">
+                <img src="public/assets/icons/no-handshake.svg" alt="Image handshake">
+                <p>Não aperte as mãos.</p>
+            </div>
+
+            <div class="recommendation-2">
+                <img src="public/assets/icons/fever.svg" alt="Image sick animal">
+                <p>Evite contato com animais doentes.</p>
+            </div>
+
+            <div class="recommendation-3">
+                <img src="public/assets/icons/no-flight.svg" alt="Image no flight">
+                <p>Não viage se você tiver tosse e febre.</p>
+            </div>
+
+            <div class="recommendation-4">
+                <img src="public/assets/icons/man.svg" alt="Image man">
+                <p>Se possuir dúvidas sobre sua situação, use máscaras.</p>
+            </div>
+
+            <div class="recommendation-5">
+                <img src="public/assets/icons/cough.svg" alt="Image man cough">
+                <p>Quando estiver espirrando ou tossindo, cubra sua boca e nariz com lenço.</p>
+            </div>
+
+            <div class="recommendation-6">
+                <img src="public/assets/icons/handwash.svg" alt="Image handwash">
+                <p>Após lavar as mãos, intensifique a higienização, utilize álcool antisséptico.</p>
+            </div>
+
+            <div class="recommendation-7">
+                <img src="public/assets/icons/social-distancing.svg" alt="Image social-distancing">
+                <p>Respeite o distanciamento social.</p>
+            </div>
+
+            <div class="recommendation-8">
+                <img src="public/assets/icons/stay-home.svg" alt="Image stay-home">
+                <p>Fique em casa durante a quarenta, e so saia em necessidade extrema.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script type="module" src="public/module/script.js"></script>
+</body>
+
+</html>

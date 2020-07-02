@@ -10,7 +10,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     ;
 }
 
@@ -30,6 +30,9 @@ img {
 }
 
 /* header */
+header {
+    margin-top: 10px
+}
 
 .header .container-select {
     display: flex;
@@ -239,10 +242,14 @@ img {
 /* mobile */
 
 @media screen and (max-width: 600px) {
+    header {
+        margin-top: 30px
+    }
+
     .header .logo {
         flex-direction: column;
     }
-    .header div.general {        
+    .header div.general {
         max-width: 320px;
         width: 300px;
         padding: 30px 10px;
@@ -298,4 +305,26 @@ img {
         grid-template-columns: 1fr;
         grid-template-areas: "recommendation-1" "recommendation-2" "recommendation-3" "recommendation-4" "recommendation-5" "recommendation-6" "recommendation-7" "recommendation-8";
     }
+}
+
+.info {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    margin-bottom: 10px;
+}
+
+.info p {
+    padding: 8px;
+    text-align: center;
+    color: var(--bg-color3);
+    background-color: var(--bg-color2);
+}
+
+.info p a {
+    color: inherit;
+}
+
+.info p a:visited {
+    color: inherit;
 }
