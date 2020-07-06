@@ -65,7 +65,7 @@ header {
     padding: 30px;
     background-color: var(--bg-color3);
     box-shadow: var(--shadow);
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .header div.general div.header-general {
@@ -103,6 +103,14 @@ header {
     font-size: 12px;
 }
 
+.container-informations .quantidades .percent {
+    display: table-caption;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
 .header div.general .last-update-general {
     margin-top: -13px;
     margin-bottom: 10px;
@@ -132,7 +140,9 @@ header {
 
 /* content data */
 
-.container-informations .last-update p {
+.container-informations .last-update  {
+    font-size: 12px;
+    font-style: italic;
     margin-top: 20px;
     text-align: center;
     margin-bottom: -20px;
@@ -147,7 +157,7 @@ header {
 .container-informations .data div {
     margin-top: 40px;
     box-shadow: var(--shadow);
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .container-informations .quantidades {
@@ -158,7 +168,7 @@ header {
     font-weight: bold;
     text-align: center;
     padding: 20px 0;
-    border-radius: 10px 10px 0 0;
+    border-radius: 0px 0px 0 0;    
 }
 
 .container-informations div p:nth-child(2) {
@@ -280,10 +290,8 @@ header {
     }
     .container-informations .data {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 2;
+        grid-template-columns: 1fr;
         gap: 20px;
-        grid-template-areas: "confirmados recuperados" "mortes mortes";
     }
     .confirmados {
         grid-area: confirmados;
@@ -294,7 +302,7 @@ header {
     .mortes {
         grid-area: mortes;
     }
-    .container-informations .data div:nth-child(3) {
+    .container-informations .data div:nth-child(2), .container-informations .data div:nth-child(3) {
         margin-top: 0;
     }
     .container-recommendations {

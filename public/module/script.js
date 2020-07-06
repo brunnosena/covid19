@@ -100,6 +100,20 @@ countrySelected.addEventListener('change', event => {
   });
 })
 
+const convertArrayNameOfCaseByCountry = (i, dados) => {
+  const confirmados = parseInt(dados[0])
+  const recuperados = parseInt(dados[1])
+  const mortes = parseInt(dados[2])
+
+  let calc1 = relDiff(confirmados, recuperados)
+  let calc2 = relDiff(confirmados, mortes)/10
+  if (i === 0)
+      return ``
+  else if (i === 1)
+      return `<span class="percent">(${calc1.toFixed(2)}%)</span>`
+  else return `<span class="percent">(${calc2.toFixed(2)}%)</span>`
+}
+
 async function getData(country) {
   try {
     let informationsResponse = await getDataCountries(country)
@@ -108,13 +122,14 @@ async function getData(country) {
     let { confirmed, recovered, deaths, lastUpdate } = result
     let data = [confirmed.value, recovered.value, deaths.value]
 
-    let day = lastUpdate.slice(0, 10)
-    paragraph1El.innerHTML = ''
-    paragraph1El.innerHTML = `Última atualização: ${day}`
-    update.appendChild(paragraph1El)
+    const d = new Date(lastUpdate)
+    let day = d.toLocaleString('pt-BR')
+      spanEl.innerHTML = ''
+      spanEl.innerHTML = `Última atualização: ${day}`
+      update.appendChild(spanEl)
 
     document.querySelectorAll('.quantidades').forEach((item, index) => {
-      item.innerHTML = data[index].toLocaleString("de-DE")
+      item.innerHTML = `${data[index].toLocaleString("de-DE")} <b>${convertArrayNameOfCaseByCountry(index, data)}</b>`
     })
 
     return result
